@@ -1,6 +1,6 @@
 # SHoMS Ontology
 
-The Smart Home Management System (SHoMS) Ontology was developed as a part of a university research project at Vienna University of Economics and Business (WU).
+The Smart Home Management System (SHoMS) Ontology was developed by Diana Ageeva and Evgenii Selianin as a part of a university research project at Vienna University of Economics and Business (WU).
 
 SHoMS ontology is built upon the IoT-Lite ontology.  
 It was designed as a conceptual model explaining the smart home management system domain. 
