@@ -20,6 +20,6 @@ Moreover, the ontology is supported by the research paper "Smart Home Management
 The paper aims at providing insights on knowledge, experi-ence and attitude of people towards smart home management systems aswell as analyzing the domain and assessing the current solutions that arepresent on the market. First of all, in-depth semi-structured interviewsare conducted to find out insights on people’s perception of smart homemanagement systems. Then a formal ontology is designed that may beused as a conceptual model for a smart home management system. Fi-nally, the score model is composed to compare the most popular systems.The  analysis  also  includes  the  description  of  the  perspective  standardthat may contribute to the development of the smart home technology.The deliverables of the study may help people to understand smart homesystems better in terms of decision making, choosing the right product tobuy and regular usage. Also, the research aims to support developers ofsmart home products by focusing their attention on the Human-CenteredDesign aspects as well as the whole set of functionalities and services re-quired by the users and available from the technology perspective.
 
 ### Keywords:
-Internet of Things,  Human-Centered Design,  Smart HomeManagement System,  Conceptual Model,  Ontology Modeling,  SystemComparison
+Internet of Things,  Human-Centered Design,  Smart Home Management System,  Conceptual Model,  Ontology Modeling, SHoMS Ontology,  System Comparison
 
 
