@@ -1,0 +1,1356 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#"
+     xml:base="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith">
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#compatibleWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#compatibleWith">
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#create -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#create">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Scenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#developedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#developedBy">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Vendor"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#providedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#providedBy">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#forSmartAppartmentOnly -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#forSmartAppartmentOnly">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#forSmartHouseOnly"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#forSmartHouseOnly -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#forSmartHouseOnly">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartHomeManagementSystem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartHomeManagementSystem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Device -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Hardware"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Platform -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Platform">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartHomeManagementSystem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">
+        <rdfs:comment xml:lang="en">Device that can capture and produce data continuously.They measure performance, conformance, state of the IoT entity and re-translate this data to the Platform. </rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Indicators"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#System -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#System">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartHomeManagementSystem"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#3G -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#3G">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#4G -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#4G">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AccessControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AccessControl">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Rules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AirConditionAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AirConditionAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnvironmentalCare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AirConditioningControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AirConditioningControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IndoorClimateControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AirPollution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AirPollution">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutoBackUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutoBackUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataStorage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutoBillPayment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutoBillPayment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Budgeting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutoRefillingFridge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutoRefillingFridge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CookingAutomation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomaticCoffeePreparation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomaticCoffeePreparation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WakeUp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomaticRecycling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomaticRecycling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnvironmentalCare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomaticTurnOn_Off -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomaticTurnOn_Off">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartLighting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomaticUtilityBillCalculation&amp;Payment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomaticUtilityBillCalculation&amp;Payment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HouseholdChores"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomationOfIncome&amp;ExpenditureManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AutomationOfIncome&amp;ExpenditureManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Budgeting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Bluetooth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Bluetooth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Booking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Booking">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Budgeting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Budgeting">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CarRental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CarRental">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Booking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CarVoiceAssistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CarVoiceAssistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Navigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Cleaning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Cleaning">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CleaningServiceInvitation&amp;Control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CleaningServiceInvitation&amp;Control">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Cleaning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ComfortAtHome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ComfortAtHome">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Command -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Command">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ComputingTools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ComputingTools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Middleware"/>
+        <rdfs:comment xml:lang="en">Computing tools for data anlytics (proposed by Gubbi et al) </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Rules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Constant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Constant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CookingAutomation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CookingAutomation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ComfortAtHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CoursesBooking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CoursesBooking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Booking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CurtainsWithElectricDriveOpening -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CurtainsWithElectricDriveOpening">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WakeUp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DailyPlanner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DailyPlanner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TimeManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataExchange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataExchange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataStorage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Rules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataStorage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataStorage">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Date">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Delivery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Delivery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Entertainment&amp;Socializing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Emergencies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Emergencies">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EmergencyDoctorCall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EmergencyDoctorCall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HealthCare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EmergencyWaterSupplyValvesShutoff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EmergencyWaterSupplyValvesShutoff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Emergencies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnergySupply -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnergySupply">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ResourceManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnterByFacialRecognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnterByFacialRecognition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Entertainment&amp;Socializing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Entertainment&amp;Socializing">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Environment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Environment">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartHomeManagementSystem"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Subject"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Vendor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnvironmentalCare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnvironmentalCare">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FindingParkingSlot&amp;ProvidingNavigation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FindingParkingSlot&amp;ProvidingNavigation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Parking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FireDetection&amp;Suppression -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FireDetection&amp;Suppression">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Emergencies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FitnessTracking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FitnessTracking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HealthCare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FlightTicketsBooking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FlightTicketsBooking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Booking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Flow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Flow">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FluidLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#FluidLevel">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Gardening -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Gardening">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#GasLeakDetection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#GasLeakDetection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Emergencies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Hardware">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HealthCare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HealthCare">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HeatingControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HeatingControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IndoorClimateControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HouseholdChores -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HouseholdChores">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ComfortAtHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IEEE802.15.4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IEEE802.15.4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Imaging -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Imaging">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#InHouseNavigationForGuests -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#InHouseNavigationForGuests">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Navigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Indicators -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Indicators">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IndoorClimateControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IndoorClimateControl">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Infrared -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Infrared">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IntegratedCloudStorage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IntegratedCloudStorage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataStorage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IntellectualCustomizationViaHabitTracking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IntellectualCustomizationViaHabitTracking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ScenarioCustomization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IntelligentAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IntelligentAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TimeManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IntelligentPeopleEvacuation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IntelligentPeopleEvacuation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Emergencies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#LTE-Advanced -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#LTE-Advanced">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#LightAdaptationToTimeOfDay&amp;Weather -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#LightAdaptationToTimeOfDay&amp;Weather">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartLighting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#LightIntensivityControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#LightIntensivityControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartLighting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#LocationDetection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#LocationDetection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Navigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ManualCustomization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ManualCustomization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ScenarioCustomization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Middleware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Middleware">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Moisture&amp;Humidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Moisture&amp;Humidity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Navigation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Navigation">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#NetworkInterface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#NetworkInterface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Presentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Noise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Noise">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Notification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Notification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Operation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Operation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Condition"/>
+        <rdfs:comment>=условия</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#OvenPreHeating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#OvenPreHeating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CookingAutomation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Parking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Parking">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#PopUpNotification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#PopUpNotification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Notification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#PowerSupply -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#PowerSupply">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ResourceManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Preassure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Preassure">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Presentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Presentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Software"/>
+        <rdfs:comment xml:lang="en">Accroding to Gubbi et al. (2013),  the presentation is 1 of 3 components in IoT paradigm, consisting of easy to understand visualization and interpretation tools, which can be widely accessed on different platforms. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ProgramInterface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ProgramInterface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Presentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Proximity&amp;Displacement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Proximity&amp;Displacement">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RecognizingCriminalsThroughCriminalDatabase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RecognizingCriminalsThroughCriminalDatabase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RemoteActivationOfBarriers&amp;Gates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RemoteActivationOfBarriers&amp;Gates">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RemoteDishWasherStart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RemoteDishWasherStart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HouseholdChores"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RemoteWashingMachineStart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RemoteWashingMachineStart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HouseholdChores"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RepairServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#RepairServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#HouseholdChores"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ResourceManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ResourceManagement">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Rules -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Rules">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Scenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Satellite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Satellite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SavingsEffectsOfSmartHomeImplementationAnalytics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SavingsEffectsOfSmartHomeImplementationAnalytics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Budgeting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Scenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Scenario">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartHomeManagementSystem"/>
+        <rdfs:comment xml:lang="en">Each control scenario is one or more chains of rules consisting of three key elements: data source, condition itself (operation plus value) and action (command or notification). These elements are linked together in an &quot;if-then&quot; pattern using the logical connectors &quot;and&quot;, &quot;or&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ScenarioCustomization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ScenarioCustomization">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Security">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Shopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Shopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Entertainment&amp;Socializing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartAlarm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartAlarm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WakeUp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartGreenhouses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartGreenhouses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Gardening"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartHomeManagementSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartHomeManagementSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartIrrigation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartIrrigation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Gardening"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartKettleWithTemperatureMaintenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartKettleWithTemperatureMaintenance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CookingAutomation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartLighting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartLighting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ComfortAtHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartTV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartTV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Entertainment&amp;Socializing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartVacuumCleaner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmartVacuumCleaner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Cleaning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmokeLeakDetection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SmokeLeakDetection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Emergencies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Software">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SpeedSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#SpeedSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Storage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Storage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Middleware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Subject">
+        <rdfs:comment xml:lang="en">a subject of management, i.e. a controlling person </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Temperature">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TextInterface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TextInterface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#UserInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TextMessage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TextMessage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Notification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TimeManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TimeManagement">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TrackingPeople -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TrackingPeople">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TravelBooking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#TravelBooking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Booking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#UserInterface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#UserInterface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Presentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VacationModePresenceSimulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VacationModePresenceSimulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Variable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Variable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#DataSource"/>
+        <rdfs:comment>внутренняя переменная, хранящаяся на микроконтроллере</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Vendor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Vendor">
+        <rdfs:comment xml:lang="en">developer of a system, platform or device</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VentilatingControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VentilatingControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#IndoorClimateControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VideoAnalytics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VideoAnalytics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VideoSurveillance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VideoSurveillance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VoiceAssistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VoiceAssistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Entertainment&amp;Socializing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VoiceInterface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VoiceInterface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#UserInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VoiceMessage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#VoiceMessage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Notification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WakeUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WakeUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ComfortAtHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WaterConditionAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WaterConditionAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#EnvironmentalCare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WaterSupply -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WaterSupply">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#ResourceManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WiFi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#WiFi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Z-wave -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Z-wave">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#CommunicationTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#equal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#equal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#greater -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#greater">
+        <rdf:type rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#inOrder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#inOrder"/>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#notInOrder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#notInOrder"/>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#not_equal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#not_equal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#not_greater -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#not_greater">
+        <rdf:type rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#not_smaller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#not_smaller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#off -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#off"/>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#on -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#on"/>
+    
+
+
+    <!-- http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#smaller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#smaller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/minotebook/ontologies/2019/1/untitled-ontology-30#Operation"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
